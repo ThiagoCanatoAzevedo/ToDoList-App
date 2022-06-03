@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(https://img.freepik.com/free-vector/stylish-white-background-with-diagonal-lines_1017-33199.jpg?w=2000),
+    linear-gradient(100deg, #222E50, #007991 );
+    background-blend-mode: multiply, normal;
+    height: 100vh;
+    overflow: hidden;
+}
+
+h1{
+    margin-top: 35px;
+    border: 0px;
+    font-family: 'Josefin Sans';
+    color: #fcfcfc;;
+}
+
+h2{
+    margin-top: -1.7rem;
+    font-family: 'Josefin Sans';
+    color: #fcfcfc;;
+}
+
+#adicionaAtividades{
+    opacity: 25;
+    box-shadow: 5px 5px 20px black;
+    margin-bottom: auto;
+    border: 0.25rem solid;
+    background-color: #253031;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 60px;
+    border-radius: 10px;
+}
+
+#lista{
+    
+    font-family: 'Heebo', sans-serif;
+    color: #fcfcfc;;
+    margin-bottom: -3rem;
+}
+
+#dados{
+    text-align: center;
+    margin-bottom:-0.6rem;
+    font-family: 'Heebo', sans-serif;
+    color: #fcfcfc;
+    
+}
+
+#inputEntradaValores{
+ 
+    border: 0.17rem solid #0c0c0c;
+    color: #fcfcfc;;
+    font-weight: bold;
+    text-align: center;
+    background-color: #565656;
+    width:9rem;
+    height:2rem;
+    border-radius: 1rem;
+    margin-right: center;
+    font-size: 1em;
+}
+
+input::placeholder{
+    text-align: center;
+    color: #fcfcfc;
+}
+
