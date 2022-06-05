@@ -5,12 +5,11 @@
 
         $nome = $_POST['nomeUsuario'];
         $email = $_POST['emailUsuario'];
-        $senha = $_POST['senhaUsuario'];
+        $senha = password_hash($_POST['senhaUsuario'], PASSWORD_DEFAULT);
 
         $result = mysqli_query($conexao, "INSERT INTO dados_usuario (nome,email, senha) 
         VALUES ('$nome', '$email', '$senha')");
 
-        echo $nome;
     };
 
 ?>

@@ -23,7 +23,6 @@
                 <br><br>
                 <button class="input" name="submit" id="submit" onclick="pegaValores()">Enviar</button>
             </form>
-
     </div>
 </body>
 </html>
