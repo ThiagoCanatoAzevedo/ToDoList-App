@@ -7,7 +7,7 @@
         $email = $_POST['emailUsuario'];
         $senha = $_POST['senhaUsuario'];
 
-        $sql = "SELECT * FROM dados_usuarios WHERE email='$email' and senha='$senha' ";
+        $sql = "SELECT * FROM dados_usuario WHERE email='$email' and senha='$senha' ";
 
         $result = $conexao->query($sql);
 
