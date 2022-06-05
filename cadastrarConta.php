@@ -7,7 +7,7 @@
         $email = $_POST['emailUsuario'];
         $senha = $_POST['senhaUsuario'];
 
-        $result = mysqli_query($conexao, "INSERT INTO dados_usuarios (nome,email, senha) 
+        $result = mysqli_query($conexao, "INSERT INTO dados_usuario (nome,email, senha) 
         VALUES ('$nome', '$email', '$senha')");
 
         echo $nome;
