@@ -22,7 +22,27 @@ h1{
 h2{
     margin-top: -1.7rem;
     font-family: 'Josefin Sans';
-    color: #fcfcfc;;
+    color: #fcfcfc;
+}
+
+#logoff {
+    background-color: #253031;
+    border: 0.15rem solid;
+    padding: 5px;
+    width: 5%;
+    border-radius: 5px;
+    color: #fcfcfc;
+    font-size: 15px;
+    position: absolute;
+    border-color: #0c0c0c;
+    top: 4%;
+    left: 92.8%;
+    box-shadow: 5px 5px 20px black;
+}
+
+button:hover{
+    filter: brightness(1.2);
+    cursor: pointer;
 }
 
 #adicionaAtividades{

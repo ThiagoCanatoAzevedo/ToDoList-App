@@ -8,8 +8,14 @@
         header('Location: cadastrarConta.php');
     }
 
-    $logado = $_SESSION['emailUsuario'];
+    if(isset($_POST['logoff'])){
+        unset($_SESSION['emailUsuario']);
+        unset($_SESSION['senhaUsuario']);
 
+        header ('Location: contaExistente.php');
+    }
+
+    $logado = $_SESSION['emailUsuario'];
 
 
 ?>
@@ -24,7 +30,12 @@
 </head>
 <body>
     <center><h1>ToDo List: Organize o seu dia!</h1></center>
-    <div id="adicionaAtividades">
+    
+    <form method="POST">
+        <button name='logoff' id='logoff'>Sair</button>
+    </form>
+    
+        <div id="adicionaAtividades">
 
         <h2>Quantidade de tarefas (Hoje): </h2>
         

@@ -63,6 +63,8 @@ botaoValores.addEventListener('keyup', function(e){
                 item = document.getElementById("inputEntradaValores").value;
 
                 itemId  = ul.childElementCount;
+
+                console.log(item);
         
                 li  = criarTabela(item, itemId);
         

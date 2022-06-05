@@ -22,7 +22,6 @@
         }
 
         elseif (password_verify($senha, $user['senha'])){
-            $_SESSION['nomeUsuario']= $nome;
             $_SESSION['emailUsuario'] = $email;
             $_SESSION['senhaUsuario'] = $senha;
 
