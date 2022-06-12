@@ -1,24 +1,4 @@
-<?php
-    session_start();
 
-    if((!isset($_SESSION['emailUsuario']) == true) and (!isset($_SESSION['senhaUsuario'])== true)){
-        unset($_SESSION['emailUsuario']);
-        unset($_SESSION['senhaUsuario']);
-        
-        header('Location: cadastrarConta.php');
-    }
-
-    if(isset($_POST['logoff'])){
-        unset($_SESSION['emailUsuario']);
-        unset($_SESSION['senhaUsuario']);
-
-        header ('Location: contaExistente.php');
-    }
-
-    $logado = $_SESSION['emailUsuario'];
-
-
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -44,15 +24,41 @@
         <p id="dados"> </p>
             
         <div class="container">
+        
             <b><ul id="lista" >
-            </ul></b>
-            <br>
-    </div >
-
+        
         <link href="siteTarefas.css" rel="stylesheet" type="text/css" />
-        <script src="siteTarefas.js"> </script>  
+        
+        <script src="siteTarefas.js"></script>  
+
     </div>
 
 </body>
     
 </html>
+
+<?php
+    include_once('config.php');
+
+    session_start();
+
+    if((!isset($_SESSION['emailUsuario']) == true) and (!isset($_SESSION['senhaUsuario'])== true)){
+        unset($_SESSION['emailUsuario']);
+        unset($_SESSION['senhaUsuario']);
+        
+        header('Location: cadastrarConta.php');
+    }
+
+    if(isset($_POST['logoff'])){
+        unset($_SESSION['emailUsuario']);
+        unset($_SESSION['senhaUsuario']);
+
+        header ('Location: contaExistente.php');
+    }
+
+    $logado = $_SESSION['emailUsuario'];
+
+
+    
+
+?>

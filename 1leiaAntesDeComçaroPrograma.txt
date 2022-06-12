@@ -1,0 +1,23 @@
+Dear programmer:
+When I wrote this code, only God and 
+I knew how it worked. 
+Now, only God knows it!
+
+Therefore, if you are trying to optimize 
+this code and it fails (most surely),
+please increase this counter as a 
+warning for the next person:
+
+var total_hours_wasted_here = 40
+----------------------------------------------------------------
+Querido programador:
+Quando eu escrevi esse código, somente Deus e
+Eu sabíamos como ele funcionava.
+Agora, somente Deus sabe como isso funciona!
+
+Portanto, se você está tentando otimizar 
+esse código e está falhando (mais provável),
+por favor, aumente este contador para 
+funcionar como um aviso para a próxima pessoa:
+
+var total_horas_perdidas_aqui = 40

@@ -7,7 +7,25 @@ var item;
 var quantidade_total_tarefas = 0
 var quantidades_tarefas_feitas = 0
 
+var listaTarefas = [];
+
 dados = document.getElementById("dados")
+
+// const Sequelize = require('sequelize');
+// const sequelize = new Sequelize ('formulario-todo', 'root', '', {
+//     host: "localhost",
+//     port: 3312,
+//     dialect: 'mysql',
+// });
+
+
+// sequelize.authenticate().then(function(){
+//     console.log("Conectado com sucesso");
+
+// }).catch(function(erro){
+//     console.log("Erro"+erro);
+// });
+
 
 finaliza()
 
@@ -61,10 +79,10 @@ botaoValores.addEventListener('keyup', function(e){
             if(document.getElementById("inputEntradaValores").value != ""){
                 
                 item = document.getElementById("inputEntradaValores").value;
+                
+                //console.log(item);
 
                 itemId  = ul.childElementCount;
-
-                console.log(item);
         
                 li  = criarTabela(item, itemId);
         
@@ -75,7 +93,11 @@ botaoValores.addEventListener('keyup', function(e){
                 document.getElementById("inputEntradaValores").value = '';  
         
                 quantidade_total_tarefas++;
-        
+
+                listaTarefas.push(item);
+
+                console.log(listaTarefas);
+
                 finaliza();
             }
         }
