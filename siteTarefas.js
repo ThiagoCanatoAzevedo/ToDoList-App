@@ -11,20 +11,20 @@ var listaTarefas = [];
 
 dados = document.getElementById("dados")
 
-// const Sequelize = require('sequelize');
-// const sequelize = new Sequelize ('formulario-todo', 'root', '', {
-//     host: "localhost",
-//     port: 3312,
-//     dialect: 'mysql',
-// });
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize ('formulario-todo', 'root', '', {
+    host: "localhost",
+    port: 3312,
+    dialect: 'mysql',
+});
 
 
-// sequelize.authenticate().then(function(){
-//     console.log("Conectado com sucesso");
+sequelize.authenticate().then(function(){
+    console.log("Conectado com sucesso");
 
-// }).catch(function(erro){
-//     console.log("Erro"+erro);
-// });
+}).catch(function(erro){
+    console.log("Erro"+erro);
+});
 
 
 finaliza()
