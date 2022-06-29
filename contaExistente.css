@@ -1,32 +1,35 @@
-#backToLoginPage{
-    text-decoration: none;
-    color: #fcfcfc;
-    font-size: 17px;
-    display: inline-block;
-    margin: 0px;
-    font-weight: bold;
+/* ====================GLOBAL==================== */
+:root{
+    --whiteColor: #fcfcfc;
+    --blackColor: #0c0c0c;
+    --grayColor: #3B413C;
 }
-
-body{
+/* ====================BODY-BACKGROUND==================== */
+#corpoBody{
     font-family: Arial, Helvetica, sans-serif;
     background: url(https://img.freepik.com/free-vector/stylish-white-background-with-diagonal-lines_1017-33199.jpg?w=2000),
     linear-gradient(100deg, #222E50, #007991 );
     background-blend-mode: multiply, normal;
 }
 
-h1{
-    color: #fcfcfc;
+#backToLoginPage{
+    text-decoration: none;
+    color: var(--whiteColor);
+    font-size: 17px;
+    display: inline-block;
+    margin: 0px;
+    font-weight: bold;
 }
-
-div{
-    background-color: #0c0c0c;
+/* ====================BLACK-BOX==================== */
+#blackBox{
+    background-color: var(--blackColor);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     padding: 80px;
     border-radius: 15px;
-    color: #fff;
+    color: var(--whiteColor);
 }
 
 .input{
@@ -37,17 +40,22 @@ div{
     font-size: 15px;
 }
 
-button{
-    background-color: #3B413C;
+#firstTitle{
+    color: var(--whiteColor);
+}
+
+#submit{
+    background-color: var(--grayColor);
     border: none;
     padding: 15px;
     width: 100%;
     border-radius: 10px;
-    color: #fcfcfc;
+    color: var(--whiteColor);
     font-size: 15px;
     
 }
-button:hover{
+
+#submit:hover{
     filter: brightness(1.2);
     cursor: pointer;
 }

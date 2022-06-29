@@ -1,8 +1,21 @@
+/* ====================GLOBAL==================== */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 
+:root{
+    --whiteColor: #fcfcfc;
+    
+    --blackColor: #0c0c0c;
+    
+    --grayColor: #3B413C;   
+    --secondGrayColor: #565656;
+    --thirdGrayColor: #1C1C1C;
+    --fourthGrayColor: #363636;
+}
 
-body{
+
+/* ====================BODY-BACKGROUND==================== */
+#corpoBody{
     margin: 0;
     padding: 0;
     background: url(https://img.freepik.com/free-vector/stylish-white-background-with-diagonal-lines_1017-33199.jpg?w=2000),
@@ -12,25 +25,29 @@ body{
     overflow: hidden;
 }
 
-h1{
-    margin-top: 35px;
-    border: 0px;
-    font-family: 'Josefin Sans';
-    color: #fcfcfc;;
+#logoff {
+    background-color: var(--grayColor);
+    border: 0.15rem solid;
+    padding: 5px;
+    width: 5%;
+    border-radius: 5px;
+    color: var(--whiteColor);
+    font-size: 15px;
+    position: absolute;
+    border-color: var(--blackColor);
+    top: 4%;
+    left: 92.8%;
+    box-shadow: 5px 5px 20px var(--blackColor);
+    cursor: pointer;
 }
 
-h2{
-    margin-top: -1.7rem;
-    font-family: 'Josefin Sans';
-    color: #fcfcfc;;
-}
-
-#adicionaAtividades{
+/* ====================GRAY-BOX==================== */
+#writeActivities{
     opacity: 25;
-    box-shadow: 5px 5px 20px black;
+    box-shadow: 5px 5px 20px var(--blackColor);
     margin-bottom: auto;
     border: 0.25rem solid;
-    background-color: #253031;
+    background-color: var(--grayColor);
     
     position: absolute;
     top: 50%;
@@ -40,37 +57,120 @@ h2{
     border-radius: 10px;
 }
 
-#lista{
-    
-    font-family: 'Heebo', sans-serif;
-    color: #fcfcfc;;
-    margin-bottom: -3rem;
+#h1{
+    margin-top: 35px;
+    border: 0px;
+    font-family: 'Josefin Sans';
+    color: var(--whiteColor);
 }
 
-#dados{
-    text-align: center;
-    margin-bottom:-0.6rem;
-    font-family: 'Heebo', sans-serif;
-    color: #fcfcfc;
-    
+#h2{
+    margin-top: -1.7rem;
+    font-family: 'Josefin Sans';
+    color: var(--whiteColor);
 }
 
-#inputEntradaValores{
- 
-    border: 0.17rem solid #0c0c0c;
-    color: #fcfcfc;;
+#inputActivities{
+    border: 0.17rem solid var(--blackColor);
     font-weight: bold;
     text-align: center;
-    background-color: #565656;
+    background-color: var(--secondGrayColor);
     width:9rem;
     height:2rem;
     border-radius: 1rem;
     margin-right: center;
     font-size: 1em;
+    color: var(--whiteColor);
 }
 
-input::placeholder{
+#list{
+    font-family: 'Heebo', sans-serif;
+    color: var(--whiteColor);
+    margin-bottom: -3rem;
+}
+
+#informations{
     text-align: center;
-    color: #fcfcfc;
+    margin-bottom:-0.6rem;
+    font-family: 'Heebo', sans-serif;
+    color: var(--whiteColor);
+    
 }
 
+#inputActivities::placeholder{
+    text-align: center;
+    color: var(--whiteColor);
+}
+
+/* ====================LATERAL-BAR==================== */
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-color: var(--whiteColor);
+}
+#icone {
+	cursor: pointer;
+	padding: 15px;
+	position: absolute;
+	z-index: 1;
+
+}
+
+#check{
+	display: none;
+	background-color: #f00;
+}
+
+.barra{
+	height: 100%;
+	width: 300px;
+	position: absolute;
+	left: -310px;
+	transition: all .2s linear;
+    background-color: var(--fourthGrayColor);
+    border: 2px solid var(--blackColor);
+}
+
+.barra .link{
+	list-style: none;
+	background-color: var(--thirdGrayColor);
+}
+
+nav{
+	width: 100%;
+	position: absolute;
+	top: 60px;
+}
+nav a{
+	text-decoration: none;
+}
+
+.link{
+	color: var(--whiteColor);
+	font-family: 'Arial';
+	font-size: 12pt;
+	padding: 20px;
+	border-bottom: 2px solid var(--fourthGrayColor);
+	transition:  all .2s linear;
+	opacity: 0;
+	margin-top: 200px;
+}
+.link:hover{
+	background-color: #4F4F4F;
+}
+
+#check:checked ~ .barra nav a .link{
+		opacity: 1;
+		margin-top: 0;
+		transition-delay: .1s;
+}
+
+#check:checked ~ .barra{
+		transform: translateX(300px);
+}
+
+#openCloseBar{
+    width: 45px;
+}

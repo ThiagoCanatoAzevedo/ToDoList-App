@@ -11,10 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de usuário</title>
 </head>
-<body>
+<body id="corpoBody">
     <a id="backToLoginPage" href="cadastrarConta.php"><p>←</p></a>
-    <div>
-        <h1>Entrar</h1>
+    <div id="blackBox">
+        <h1 id="firstTitle">Entrar</h1>
             <form  action="testeLogin.php" method="POST">
     
                 <input class="input" type="email" placeholder="Email já cadastrado" name="emailUsuario" id="emailUsuario" required>
@@ -23,7 +23,7 @@
                 <br><br>
                 <button class="input" name="submit" id="submit" onclick="pegaValores()">Enviar</button>
             </form>
-
     </div>
+    <script src="cadastrarContas.js"> </script> 
 </body>
 </html>
