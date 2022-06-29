@@ -4,9 +4,9 @@
     if(isset($_POST['submit']) && !empty($_POST['emailUsuario']) && !empty($_POST['senhaUsuario'])){
         include_once('config.php');
 
-        $nome = $_POST['nomeUsuario'];
-        $email = $_POST['emailUsuario'];
-        $senha = $_POST['senhaUsuario']; //-> Senha digitada pelo usuário
+        $nome = addslashes($_POST['nomeUsuario']);
+        $email = addslashes ($_POST['emailUsuario']);
+        $senha = addslashes($_POST['senhaUsuario']); //-> Senha digitada pelo usuário
 
         $sql = "SELECT * FROM dados_usuario WHERE email='$email' LIMIT 1 "; //--> Colocar email aqui
 
@@ -39,6 +39,4 @@
         header('Location: cadastrarConta.php');
     }
     
-
-
 ?>
